@@ -1,0 +1,5 @@
+﻿
+<div *ngFor="let album of getAlbumList()">
+    <photo-list *ngIf="album.id==activeAlbumId" [photoList]="getAlbumPhotoList(album.id)"></photo-list>
+</div>
+

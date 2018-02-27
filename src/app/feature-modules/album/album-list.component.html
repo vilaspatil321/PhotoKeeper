@@ -1,0 +1,18 @@
+﻿<h3>Album List of User - {{userName}}</h3>
+<table>
+    <thead>
+        <tr>
+            <th>Title</th>           
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let album of albumList" (click)="toggleSelection(album)" [ngClass]="{'selected': album.isSelected}">
+            <td>{{album.title}}</td>
+        </tr>
+    </tbody>
+</table>
+<label [innerHtml]="validationMessage" class="text-danger"></label>
+
+<br />
+<button [disabled] ="selectedCount==0" [routerLink]="['/photos']">Show Photos</button>
+

@@ -1,0 +1,9 @@
+﻿
+<div class="container-fluid">
+    <h3>Photo List of Album - {{albumName}}</h3>
+    <div class="row">
+        <div *ngFor="let photo of photoList" class="col-md-3">
+            <img [src]="photo.url" style="max-width:100%;" [title]="photo.title"/>
+        </div>
+    </div>
+</div>

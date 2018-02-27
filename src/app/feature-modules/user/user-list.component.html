@@ -1,0 +1,17 @@
+﻿<h3>User List</h3>
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Address</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of userList" [routerLink]="['/albums/', user.id]" [title]="user.name">
+            <td>{{user.name}}</td>
+            <td>{{user.email}}</td>
+            <td [innerHtml] ="user.address|address"></td>
+        </tr>
+    </tbody>
+</table>
